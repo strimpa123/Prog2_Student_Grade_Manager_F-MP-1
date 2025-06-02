@@ -97,9 +97,10 @@ namespace Prog2_Student_Grade_Manager_F_MP_1
                 for (int i = 0;i < data.Length;i++)
                 {
                     string[] data_values = data[i].Split(',');
+                    string format = $"{data_values[0]},{data_values[1]},{data_values[2]},{data_values[3]},{data_values[4]},{data_values[5]}";
                     if (userInput == data_values[0])
                     {
-                        File.WriteAllText("");
+                        File.WriteAllText($"reports/{data_values[1]}, {data_values[2]}.csv", format);
                     }
                 }
             }
